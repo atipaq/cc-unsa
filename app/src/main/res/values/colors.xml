@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cherry_unsa">#6A2733</color>
+    <color name="grey_unsa">#727376</color>
+    <color name="golden_unsa">#D2AE6D</color>
 </resources>
