@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/cherry_unsa</item>
+        <item name="colorPrimaryDark">@color/grey_unsa</item>
+        <item name="colorAccent">@color/golden_unsa</item>
+        <item name="android:textColorPrimary">@color/grey_unsa</item>
+        <item name="android:textColorSecondary">@color/golden_unsa</item>
+        <!-- You can add more customizations here -->
+    </style>
+</resources>
