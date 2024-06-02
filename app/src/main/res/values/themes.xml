@@ -1,8 +1,24 @@
+<!-- res/values/themes/themes.xml -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Ccunsa" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/cherry_unsa</item>
+        <item name="colorPrimaryDark">@color/grey_unsa</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/golden_unsa</item>
+        <item name="colorSecondaryVariant">@color/grey_unsa</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color -->
+        <!-- <item name="statusBarColor" tools:targetApi="l">@color/grey_unsa</item> -->
+
+        <!-- Customize your theme here -->
+        <item name="android:colorPrimary">@color/cherry_unsa</item>
+        <item name="android:colorPrimaryDark">@color/grey_unsa</item>
+        <item name="android:colorAccent">@color/golden_unsa</item>
     </style>
 
     <style name="Theme.Ccunsa" parent="Base.Theme.Ccunsa" />
