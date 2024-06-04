@@ -5,8 +5,8 @@
         android:title="Home"
         android:icon="@drawable/baseline_home_24"/>
     <item
-        android:id="@+id/arte"
-        android:title="Arte"
+        android:id="@+id/categories"
+        android:title="Categorias"
         android:icon="@drawable/baseline_photo_library_24"/>
     <item
         android:id="@+id/fab"
