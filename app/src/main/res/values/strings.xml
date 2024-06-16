@@ -3,4 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_search_hint_input">Buscar obra, artista, expocisión</string>
+    <string name="pinturas">Pinturas\n</string>
+    <string name="icon_1_item">icon-1-item</string>
+    <string name="artistas">Artistas</string>
+    <string name="exposiciones">Exposiciones</string>
 </resources>
