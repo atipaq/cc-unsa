@@ -2,4 +2,5 @@
     <string name="app_name">cc-unsa</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_search_hint_input">Buscar obra, artista, expocisión</string>
 </resources>

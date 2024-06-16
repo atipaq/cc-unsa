@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".activity.HomeActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.2"
+        android:translationY="-300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle_bg_unsa" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="com.example.cc_unsa.fragment.CardSliderFragment"
@@ -20,28 +32,27 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="288dp"
-        android:layout_height="33dp"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:hint="Buscar obra, artista, expocisión"
+        android:background="@drawable/search_text_input_background"
+        android:hint="@string/text_search_hint_input"
         android:inputType="text"
-        android:textSize="12sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:textColorHint="@color/white"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingVertical="10dp"
+        android:drawableStart="@drawable/ic_search_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        app:menu="@menu/categories"
-        android:layout_width="364dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
@@ -51,5 +62,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="349dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
