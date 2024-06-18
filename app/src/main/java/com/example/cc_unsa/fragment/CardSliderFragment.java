@@ -3,12 +3,19 @@ package com.example.cc_unsa.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cc_unsa.R;
+import com.example.cc_unsa.adapter.ItemAdapter;
+import com.example.cc_unsa.dto.ItemDto;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,12 +62,24 @@ public class CardSliderFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_card_slider, container, false);
+        View view = inflater.inflate(R.layout.fragment_card_slider, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.rv_items_home);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        ArrayList<ItemDto> items = new ArrayList<>();
+        items.add(ItemDto.builder().category("Category 1").title("Title 1").description("Description 1").imageUrl("https://via.placeholder.com/150").build());
+        items.add(ItemDto.builder().category("Category 2").title("Title 2").description("Description 2").imageUrl("https://via.placeholder.com/150").build());
+        items.add(ItemDto.builder().category("Category 3").title("Title 3").description("Description 3").imageUrl("https://via.placeholder.com/150").build());
+
+        ItemAdapter itemAdapter = new ItemAdapter(items);
+        recyclerView.setAdapter(itemAdapter);
+
+        return view;
     }
 }
