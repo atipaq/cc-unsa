@@ -1,9 +1,15 @@
-package com.example.cc_unsa
+package com.example.cc_unsa.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.cc_unsa.R
 import com.example.cc_unsa.databinding.ActivityMainBinding
+import com.example.cc_unsa.view.fragment.ArtistsFragment
+import com.example.cc_unsa.view.fragment.CategoriesFragment
+import com.example.cc_unsa.view.fragment.HomeFragment
+import com.example.cc_unsa.view.fragment.InformationFragment
+import com.example.cc_unsa.view.fragment.MapFragment
 
 class MainActivity : AppCompatActivity() {
 
