@@ -46,7 +46,6 @@ class CustomMapView(context: Context) : View(context) {
         gallery3(canvas, viewWidth, viewHeight)
         gallery6(canvas, viewWidth, viewHeight)
         lounge(canvas, viewWidth, viewHeight)
-        // Agregar más llamadas a funciones para dibujar otras habitaciones y pasillos
     }
 
     private fun gallery4a(canvas: Canvas, viewWidth: Float, viewHeight: Float) {
