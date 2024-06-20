@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/lavender"
-tools:context=".view.fragment.MapFragment">
-<!-- TODO: Update blank fragment layout -->
-<TextView
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Mapa"
-    android:gravity="center"
-    android:textSize="30sp"
-    android:textColor="@color/white"/>
-</FrameLayout>
+    tools:context=".view.activity.MainActivity">
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="com.example.cc_unsa.view.fragment.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
