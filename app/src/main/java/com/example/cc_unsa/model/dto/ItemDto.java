@@ -1,4 +1,4 @@
-package com.example.cc_unsa.dto;
+package com.example.cc_unsa.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cc_unsa.R;
-import com.example.cc_unsa.dto.ItemDto;
+import com.example.cc_unsa.model.dto.ItemDto;
 
 import java.util.List;
 

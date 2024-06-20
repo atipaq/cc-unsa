@@ -12,10 +12,9 @@ import android.view.ViewGroup;
 
 import com.example.cc_unsa.R;
 import com.example.cc_unsa.adapter.ItemAdapter;
-import com.example.cc_unsa.dto.ItemDto;
+import com.example.cc_unsa.model.dto.ItemDto;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
