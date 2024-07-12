@@ -70,7 +70,7 @@ public class CardSliderFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_card_slider, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_items_home);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false));
         ArrayList<ItemDto> items = new ArrayList<>();
         items.add(ItemDto.builder().category("Category 1").title("Title 1").description("Description 1").imageUrl("https://via.placeholder.com/150").build());
         items.add(ItemDto.builder().category("Category 2").title("Title 2").description("Description 2").imageUrl("https://via.placeholder.com/150").build());
