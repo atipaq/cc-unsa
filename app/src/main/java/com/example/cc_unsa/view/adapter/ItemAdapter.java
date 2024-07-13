@@ -1,4 +1,4 @@
-package com.example.cc_unsa.adapter;
+package com.example.cc_unsa.view.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,15 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cc_unsa.R;
-import com.example.cc_unsa.model.dto.ItemDto;
+import com.example.cc_unsa.model.dto.PictureItemDto;
 
 import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder>{
 
-    private List<ItemDto> items;
+    private List<PictureItemDto> items;
 
-    public ItemAdapter(List<ItemDto> items) {
+    public ItemAdapter(List<PictureItemDto> items) {
         this.items = items;
     }
 
@@ -30,9 +30,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-        ItemDto item = items.get(position);
+        PictureItemDto item = items.get(position);
         holder.title.setText(item.getTitle());
-        holder.description.setText(item.getDescription());
+        holder.description.setText(item.getTechnique());
     }
 
     @Override

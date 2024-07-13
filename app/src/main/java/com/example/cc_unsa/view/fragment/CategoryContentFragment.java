@@ -1,27 +1,21 @@
-package com.example.cc_unsa.fragment;
+package com.example.cc_unsa.view.fragment;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cc_unsa.R;
-import com.example.cc_unsa.adapter.ItemAdapter;
-import com.example.cc_unsa.model.dto.ItemDto;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CardSliderFragment#newInstance} factory method to
+ * Use the {@link CategoryContentFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CardSliderFragment extends Fragment {
+public class CategoryContentFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +26,7 @@ public class CardSliderFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CardSliderFragment() {
+    public CategoryContentFragment() {
         // Required empty public constructor
     }
 
@@ -42,11 +36,11 @@ public class CardSliderFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CardSliderFragment.
+     * @return A new instance of fragment CategoryContentFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CardSliderFragment newInstance(String param1, String param2) {
-        CardSliderFragment fragment = new CardSliderFragment();
+    public static CategoryContentFragment newInstance(String param1, String param2) {
+        CategoryContentFragment fragment = new CategoryContentFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,24 +55,12 @@ public class CardSliderFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_card_slider, container, false);
-
-        RecyclerView recyclerView = view.findViewById(R.id.rv_items_home);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        ArrayList<ItemDto> items = new ArrayList<>();
-        items.add(ItemDto.builder().category("Category 1").title("Title 1").description("Description 1").imageUrl("https://via.placeholder.com/150").build());
-        items.add(ItemDto.builder().category("Category 2").title("Title 2").description("Description 2").imageUrl("https://via.placeholder.com/150").build());
-        items.add(ItemDto.builder().category("Category 3").title("Title 3").description("Description 3").imageUrl("https://via.placeholder.com/150").build());
-
-        ItemAdapter itemAdapter = new ItemAdapter(items);
-        recyclerView.setAdapter(itemAdapter);
-
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_category_content, container, false);
     }
 }

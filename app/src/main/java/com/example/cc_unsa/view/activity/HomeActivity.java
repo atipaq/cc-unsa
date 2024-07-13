@@ -1,4 +1,4 @@
-package com.example.cc_unsa.activity;
+package com.example.cc_unsa.view.activity;
 
 import android.os.Bundle;
 
