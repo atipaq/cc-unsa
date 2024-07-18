@@ -15,7 +15,7 @@ class MainSketchView(context: Context?) : View(context) {
     }
 
     private val galleryPaint = Paint().apply {
-        color = Color.rgb(255, 87, 34) // Orange color for galleries
+        color = Color.rgb(241, 58, 33) // Orange color for galleries
         style = Paint.Style.FILL
     }
 
@@ -45,27 +45,68 @@ class MainSketchView(context: Context?) : View(context) {
         style = Paint.Style.FILL
     }
 
+    private val sshhPaint = Paint().apply {
+        color = Color.rgb(11, 246, 232) // Orange color for galleries
+        style = Paint.Style.FILL
+    }
+
     data class Gallery(val x: Float, val y: Float, val label: String)
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        val wu = width.toFloat()/24f
+        val hu = height.toFloat()/50f
 
         // Draw the red background
         canvas.drawRect(0f, 0f, width.toFloat(), height.toFloat(), backgroundPaint)
 
+        //Draw the entry text
+        canvas.drawText("ENTRADA", wu*8.5f, hu*2f, galleryTextPaint)
+
+        // Draw gallery circles
+        canvas.drawCircle(wu*16f, hu*7.5f, wu*2.5f, galleryPaint) // Gallery 1
+        canvas.drawText("GALERIA", wu*16f, hu*7.5f, galleryTextPaint)
+        canvas.drawText("1", wu*16f, hu*7.5f+40f, galleryTextPaint)
+
+        canvas.drawCircle(wu*22f, hu*14.5f, wu*2.5f, galleryPaint) // Gallery 2
+        canvas.drawText("GALERIA", wu*22f, hu*14.5f, galleryTextPaint)
+        canvas.drawText("2", wu*22f, hu*14.5f+40f, galleryTextPaint)
+
+        canvas.drawCircle(wu*16f, hu*21.5f, wu*2.5f, galleryPaint) // Gallery 3
+        canvas.drawText("GALERIA", wu*16f, hu*21.5f, galleryTextPaint)
+        canvas.drawText("3", wu*16f, hu*21.5f+40f, galleryTextPaint)
+
+        canvas.drawCircle(wu*4f, hu*14.5f, wu*2.5f, galleryPaint) // Gallery 4
+        canvas.drawText("GALERIA", wu*4f, hu*14.5f, galleryTextPaint)
+        canvas.drawText("4", wu*4f, hu*14.5f+40f, galleryTextPaint)
+
+        canvas.drawCircle(wu*4f, hu*22.5f, wu*2.5f, galleryPaint) // Gallery 5
+        canvas.drawText("GALERIA", wu*4f, hu*22.5f, galleryTextPaint)
+        canvas.drawText("5", wu*4f, hu*22.5f+40f, galleryTextPaint)
+
+        canvas.drawCircle(wu*22f, hu*34f, wu*2.5f, galleryPaint) // Gallery 6
+        canvas.drawText("GALERIA", wu*22f, hu*34f, galleryTextPaint)
+        canvas.drawText("6", wu*22f, hu*34f+40f, galleryTextPaint)
+
+        canvas.drawCircle(wu*16f, hu*39f, wu*2.5f, galleryPaint) // Gallery 7
+        canvas.drawText("GALERIA", wu*16f, hu*39f, galleryTextPaint)
+        canvas.drawText("7", wu*16f, hu*39f+40f, galleryTextPaint)
+
         // Draw the white pathways
-        canvas.drawRect(150f, 0f, 450f, height.toFloat(), whitePaint)
-        canvas.drawRect(0f, 150f, width.toFloat(), 450f, whitePaint)
+        canvas.drawRect(wu*5.5f,hu*3.5f,wu*11.5f,hu*43,whitePaint)
+        canvas.drawRect(wu*11.5f,hu*9.5f,wu*19.5f,hu*20f,whitePaint)
+        canvas.drawRect(wu*11.5f,hu*26.5f,wu*20.5f,hu*37.5f,whitePaint)
+        canvas.drawRect(wu*4.5f,hu*43f,wu*20f,hu*49f,whitePaint)
 
         // Draw the green squares
-        canvas.drawRect(600f, 1350f, 900f, 1650f, greenPaint)
-        canvas.drawRect(1200f, 600f, 1500f, 900f, greenPaint)
+        canvas.drawRect(wu*14f,hu*31f,wu*19f,hu*36.5f,greenPaint)
+        canvas.drawRect(wu*14f,hu*45f,wu*17f,hu*48f,greenPaint)
 
-        // Draw the entrance
-        canvas.drawRect(0f, 1200f, 300f, 1500f, entryPaint)
+        // Draw the SSHH
+        canvas.drawRect(wu,hu*42.5f,wu*4.5f,hu*49f,sshhPaint)
 
         // Draw galleries and labels
-        val galleries = listOf(
+        /*val galleries = listOf(
             Gallery(900f, 150f, "GALERIA 1"),
             Gallery(1350f, 150f, "GALERIA 2"),
             Gallery(900f, 600f, "GALERIA 3"),
@@ -73,15 +114,15 @@ class MainSketchView(context: Context?) : View(context) {
             Gallery(150f, 1050f, "GALERIA 5"),
             Gallery(1500f, 750f, "GALERIA 6"),
             Gallery(900f, 1500f, "GALERIA 7")
-        )
+        )*/
 
-        for (gallery in galleries) {
+        /*for (gallery in galleries) {
             canvas.drawOval(RectF(gallery.x, gallery.y, gallery.x + 300f, gallery.y + 300f), galleryPaint)
             canvas.drawText(gallery.label, gallery.x + 150f, gallery.y + 170f, galleryTextPaint)
-        }
+        }*/
 
         // Draw doors
-        val doors = listOf(
+        /*val doors = listOf(
             Pair(1050f, 300f),
             Pair(1200f, 300f),
             Pair(1050f, 750f),
@@ -93,6 +134,6 @@ class MainSketchView(context: Context?) : View(context) {
 
         for ((x, y) in doors) {
             canvas.drawRect(x, y, x + 100f, y + 50f, doorPaint)
-        }
+        }*/
     }
 }

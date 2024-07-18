@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.lombok)
+    implementation(libs.androidx.room.common)
     annotationProcessor(libs.lombok)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
