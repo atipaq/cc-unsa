@@ -22,8 +22,8 @@
 
     <View
         android:id="@+id/view_map"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="64dp"
         android:elevation="10dp"
@@ -34,8 +34,8 @@
     </View>
 
     <ImageView
-        android:layout_width="28dp"
-        android:layout_height="28dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:src="@drawable/track__1_"
         android:elevation="11dp"
         app:layout_constraintBottom_toBottomOf="@+id/view_map"
