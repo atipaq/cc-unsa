@@ -8,7 +8,14 @@
     <color name="lavender">#8692f7</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_grey">#F5F5F5</color>
+    <color name="grey">#727376</color>
     <color name="cherry_unsa">#6A2733</color>
     <color name="grey_unsa">#727376</color>
     <color name="golden_unsa">#D2AE6D</color>
+    <color name="blue_unsa">#3A5F8B</color>
+    <color name="white_transparent">#80FFFFFF</color>
+    <color name="yellow_gold">#F8E0A0</color>
+    <color name="red_title">#BE0127</color>
+    <color name="red_icon">#E22020</color>
 </resources>
