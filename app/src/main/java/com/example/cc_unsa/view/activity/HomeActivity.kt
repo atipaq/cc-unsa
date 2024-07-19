@@ -22,7 +22,8 @@ class HomeActivity : AppCompatActivity() {
 
         val btnViewMap = findViewById<View>(R.id.view_map)
         btnViewMap.setOnClickListener {
-            // TO-DO: Navigate to MapActivity
+            // start map main fragment
+
         }
     }
 }
