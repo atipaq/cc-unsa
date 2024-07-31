@@ -1,5 +1,6 @@
 package com.example.cc_unsa.model.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -10,15 +11,15 @@ import com.example.cc_unsa.model.entity.GalleryEntity
 @Dao
 interface GalleryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertGallery(gallery: GalleryEntity)
+    suspend fun insertGallery(gallery: GalleryEntity)
 
     @Delete
-    fun deleteGallery(id: Int)
+    suspend fun deleteGallery(entity: GalleryEntity)
 
     @Query("SELECT * FROM gallery g WHERE g.id = :id")
-    fun getGalleryById(id: Int): GalleryEntity
+    suspend fun getGalleryById(id: Int): GalleryEntity
 
     @Query("SELECT * FROM gallery")
-    fun getAllGalleries(): List<GalleryEntity>
+    fun getAllGalleries(): LiveData<List<GalleryEntity>>
 
 }

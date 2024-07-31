@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:elevation="10dp"
         android:src="@drawable/icon_perfil_man_blue_64"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
 
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextSearch"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -88,7 +88,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText">
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearch">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -209,23 +209,42 @@
         android:id="@+id/fragmentContainerView"
         android:name="com.example.cc_unsa.view.fragment.CardSliderFragment"
         android:layout_width="339dp"
-        android:layout_height="224dp"
+        android:layout_height="424dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categorias"
+        android:textColor="@color/cherry_unsa"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="normal"
+        android:fontFamily="@font/rowdies"
+        android:textSize="20sp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/botPannelTitle"
+        app:layout_constraintStart_toStartOf="@id/botPannelTitle"
+        />
 
-    <Space
-        android:id="@+id/spaceForBotPannel"
-        android:layout_width="match_parent"
-        android:layout_height="650dp"
-        app:layout_constraintTop_toTopOf="parent"/>
     <View
         android:id="@+id/botPannelTitle"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@drawable/category_main_background"
-        app:layout_constraintTop_toBottomOf="@+id/spaceForBotPannel"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="@+id/botPannelTitle"
+        app:layout_constraintEnd_toEndOf="@+id/botPannelTitle"
+        app:layout_constraintStart_toStartOf="@+id/botPannelTitle"
+        app:srcCompat="@drawable/icon_up_arrow" />
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/layoutPannelCategory"

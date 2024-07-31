@@ -3,13 +3,14 @@ package com.example.cc_unsa.view.fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.fragment.app.viewModels
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cc_unsa.R
-import com.example.cc_unsa.model.dto.PictureItemDto
-import com.example.cc_unsa.view.adapter.ItemAdapter
+import com.example.cc_unsa.view.adapter.CarouselHomeAdapter
+import com.example.cc_unsa.viewmodel.CarouselViewModel
 
 /**
  * A simple [Fragment] subclass.
@@ -17,16 +18,12 @@ import com.example.cc_unsa.view.adapter.ItemAdapter
  * create an instance of this fragment.
  */
 class CardSliderFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var mParam1: String? = null
-    private var mParam2: String? = null
+    //Carousel View model
+    private val carouselViewModel: CarouselViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            mParam1 = arguments!!.getString(ARG_PARAM1)
-            mParam2 = arguments!!.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -38,15 +35,16 @@ class CardSliderFragment : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.rv_items_home)
         recyclerView.layoutManager =
             LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
-        val items = mutableListOf<PictureItemDto>()
-        items.add(PictureItemDto(1, "Pintura 1", "Pintura", "Oleo", "20x30", "https://www.w3schools.com/w3images/mountains.jpg"))
-        items.add(PictureItemDto(2, "Pintura 2", "Pintura", "Oleo", "20x30", "https://www.w3schools.com/w3images/mountains.jpg"))
-        items.add(PictureItemDto(3, "Pintura 3", "Pintura", "Oleo", "20x30", "https://www.w3schools.com/w3images/mountains.jpg"))
-        items.add(PictureItemDto(4, "Pintura 4", "Pintura", "Oleo", "20x30", "https://www.w3schools.com/w3images/mountains.jpg"))
-        items.add(PictureItemDto(5, "Pintura 5", "Pintura", "Oleo", "20x30", "https://www.w3schools.com/w3images/mountains.jpg"))
 
-        val itemAdapter = ItemAdapter(items)
-        recyclerView.adapter = itemAdapter
+        //Obtener la lista de obras
+        carouselViewModel.allWorks.observe(viewLifecycleOwner) { works ->
+            // Update the cached copy of the words in the adapter.
+            works?.let {
+                val itemAdapter =
+                    this.context?.let { it1 -> CarouselHomeAdapter(it1,works) }
+                recyclerView.adapter = itemAdapter
+            }
+        }
 
         return view
     }

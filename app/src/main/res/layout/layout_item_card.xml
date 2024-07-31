@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:focusable="true"
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp">
 
@@ -11,43 +12,52 @@
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="15dp"
+        android:focusable="auto"
         android:background="@drawable/card_item_linear_background">
+
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/bodegon010001"/>
+            android:id="@+id/CarouserItemImgView"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/pintura01" />
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:translationY="-25dp"
-            android:src="@drawable/item_shadow_01"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/sombra"/>
 
         <TextView
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bodegon 01"
+            android:fontFamily="@font/rowdies"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
-            android:id="@+id/item_description"
+            android:id="@+id/item_dimension"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DIMENSIONES: 34.5 x 45 cm."
             android:textSize="10sp"
-            android:textStyle="bold"
+            android:fontFamily="@font/rowdies"
             android:textColor="@color/white"/>
+
         <TextView
-            android:id="@+id/item_category"
+            android:id="@+id/item_technique"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rowdies"
             android:text="Acuarela"
-            android:textSize="24sp"
-            android:textStyle="normal"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="15sp" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

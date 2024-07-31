@@ -105,35 +105,6 @@ class MainSketchView(context: Context?) : View(context) {
         // Draw the SSHH
         canvas.drawRect(wu,hu*42.5f,wu*4.5f,hu*49f,sshhPaint)
 
-        // Draw galleries and labels
-        /*val galleries = listOf(
-            Gallery(900f, 150f, "GALERIA 1"),
-            Gallery(1350f, 150f, "GALERIA 2"),
-            Gallery(900f, 600f, "GALERIA 3"),
-            Gallery(300f, 1050f, "GALERIA 4"),
-            Gallery(150f, 1050f, "GALERIA 5"),
-            Gallery(1500f, 750f, "GALERIA 6"),
-            Gallery(900f, 1500f, "GALERIA 7")
-        )*/
 
-        /*for (gallery in galleries) {
-            canvas.drawOval(RectF(gallery.x, gallery.y, gallery.x + 300f, gallery.y + 300f), galleryPaint)
-            canvas.drawText(gallery.label, gallery.x + 150f, gallery.y + 170f, galleryTextPaint)
-        }*/
-
-        // Draw doors
-        /*val doors = listOf(
-            Pair(1050f, 300f),
-            Pair(1200f, 300f),
-            Pair(1050f, 750f),
-            Pair(450f, 1050f),
-            Pair(300f, 1050f),
-            Pair(1350f, 750f),
-            Pair(1050f, 1500f)
-        )
-
-        for ((x, y) in doors) {
-            canvas.drawRect(x, y, x + 100f, y + 50f, doorPaint)
-        }*/
     }
 }

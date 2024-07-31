@@ -1,9 +1,8 @@
-package com.example.cc_unsa.model.dto
+package com.example.cc_unsa.viewmodel.dto
 
-data class PictureItemDto(
+data class WorkItemDto(
     val id: Int,
     val title:String,
-    val category: String,
     val technique: String,
     val dimension: String,
     val image: String
