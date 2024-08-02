@@ -15,6 +15,7 @@ import com.example.cc_unsa.view.fragment.CarouselHomeFragment
 import com.example.cc_unsa.view.fragment.FragmentListener
 import com.example.cc_unsa.view.fragment.GalleryMapFragment
 import com.example.cc_unsa.view.fragment.MainMapFragment
+import com.example.cc_unsa.view.fragment.WorkDetailFragment
 
 class HomeActivity : AppCompatActivity(), FragmentListener {
 
@@ -25,6 +26,7 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
     private lateinit var tittleMenuHome: List<TextView>
     private lateinit var thisMotionLAyout:MotionLayout
     private var onGalleryMapView: Boolean = false
+    private var onWorkFragmentView: Boolean = false
 
     override fun replaceFragment(galleryId:Int) {
         onGalleryMapView = true
@@ -35,6 +37,19 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
         }
         supportFragmentManager.beginTransaction()
             .replace(R.id.mainMapFragmentView, galleryFragment)
+            .addToBackStack(null)  // Permite volver a MyFragment con el botón "atrás"
+            .commit()
+    }
+
+    override fun replaceToWorkFragment(workId: Int) {
+        onWorkFragmentView = true
+        val workFragment = WorkDetailFragment().apply {
+            arguments = Bundle().apply {
+                putInt("workId", workId)
+            }
+        }
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.mainMapFragmentView, workFragment)
             .addToBackStack(null)  // Permite volver a MyFragment con el botón "atrás"
             .commit()
     }
