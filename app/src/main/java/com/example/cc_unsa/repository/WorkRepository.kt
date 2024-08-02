@@ -10,4 +10,6 @@ class WorkRepository(
     suspend fun insertWork(work: WorkEntity) {
         workDao.insertWork(work)
     }
+
+    suspend fun getWorksByExhibitionId(exhibitionId: Int) = workDao.getWorkByExhibitionId(exhibitionId)
 }

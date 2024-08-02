@@ -12,7 +12,7 @@ interface CarouselDao {
     @Query("SELECT a.id, a.name, a.specialty, a.photo FROM artist a")
     fun getAllArtist():LiveData<List<ArtistItemDto>>
 
-    @Query("SELECT e.id, a.name as artistName, e.period, e.name FROM exhibition e, artist a WHERE e.artistId = a.id")
+    @Query("SELECT e.id, w.image, a.name as artistName, e.period, e.name FROM exhibition e, artist a, work w WHERE e.artistId = a.id AND e.id = w.exhibitionId")
     fun getAllExhibition():LiveData<List<ExhibitionItemDto>>
 
     @Query("SELECT w.id, w.title, w.technique,w.dimension, w.image FROM work w")

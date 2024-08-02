@@ -7,6 +7,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.cc_unsa.model.entity.WorkEntity
+import com.example.cc_unsa.viewmodel.dto.WorkDto
 
 @Dao
 interface WorkDao {
@@ -18,6 +19,9 @@ interface WorkDao {
 
     @Query("SELECT * FROM work w WHERE w.id = :id")
     suspend fun getWorkById(id: Int): WorkEntity
+
+    @Query("SELECT * FROM work w WHERE w.exhibitionId = :exhibitionId")
+    suspend fun getWorkByExhibitionId(exhibitionId: Int): List<WorkDto>
 
     @Query("SELECT * FROM work")
     fun getAllWorks(): LiveData<List<WorkEntity>>
