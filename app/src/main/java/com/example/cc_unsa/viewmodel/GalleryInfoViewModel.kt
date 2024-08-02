@@ -16,5 +16,5 @@ class GalleryInfoViewModel(application: Application): AndroidViewModel(applicati
         workRepository = WorkRepository(dbInstance.workDao())
     }
     suspend fun getExhibitionById(exhibitionId: Int) = exhibitionRepository.getExhibitionInfoById(exhibitionId)
-    suspend fun getWorksByExhibitionId(exhibitionId: Int) = workRepository.getWorksByExhibitionId(exhibitionId)
+    suspend fun getWorksByExhibitionId(exhibitionId: Int) = workRepository.getWorksInGalleryByExhibitionId(exhibitionId)
 }

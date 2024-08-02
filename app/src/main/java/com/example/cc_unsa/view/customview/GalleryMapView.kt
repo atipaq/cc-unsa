@@ -14,13 +14,14 @@ import android.view.MotionEvent
 import android.view.View
 import com.example.cc_unsa.view.fragment.FragmentListener
 import com.example.cc_unsa.viewmodel.dto.WorkDto
+import com.example.cc_unsa.viewmodel.dto.WorkInGalleryDto
 import java.io.IOException
 
 class GalleryMapView(
     context: Context?,
 
     private val exhibitionName: String,
-    private val works:List<WorkDto>
+    private val works:List<WorkInGalleryDto>
 ): View(context) {
     private var fragmentChangeListener: FragmentListener? = null
     init {

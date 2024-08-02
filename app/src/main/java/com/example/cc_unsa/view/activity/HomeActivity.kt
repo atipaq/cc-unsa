@@ -25,10 +25,12 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
     private lateinit var menuHome: List<View>
     private lateinit var tittleMenuHome: List<TextView>
     private lateinit var thisMotionLAyout:MotionLayout
+    private var anyFragmentViewOnStack: Boolean = false
     private var onGalleryMapView: Boolean = false
     private var onWorkFragmentView: Boolean = false
 
     override fun replaceFragment(galleryId:Int) {
+        anyFragmentViewOnStack = true
         onGalleryMapView = true
         val galleryFragment = GalleryMapFragment().apply {
             arguments = Bundle().apply {
@@ -42,6 +44,7 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
     }
 
     override fun replaceToWorkFragment(workId: Int) {
+        anyFragmentViewOnStack = true
         onWorkFragmentView = true
         val workFragment = WorkDetailFragment().apply {
             arguments = Bundle().apply {
@@ -65,6 +68,7 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
         binding.btnViwMapIcon.setOnClickListener {
             thisMotionLAyout.transitionToState(R.id.endMap)
             val fragment = MainMapFragment.newInstance()
+            anyFragmentViewOnStack = true
             supportFragmentManager.beginTransaction().replace(R.id.mainMapFragmentView, fragment)
                 .commit()
         }
@@ -72,8 +76,8 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
         //Cerrar panel inferior al hacer click en el boton de atras
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if(onGalleryMapView){
-                    onGalleryMapView = false
+                Log.e("NumberFragment", supportFragmentManager.backStackEntryCount.toString())
+                if(supportFragmentManager.backStackEntryCount > 0) {
                     supportFragmentManager.popBackStackImmediate()
                 } else {
                     setStartTransition()
@@ -92,8 +96,12 @@ class HomeActivity : AppCompatActivity(), FragmentListener {
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
                 if (p1 == R.id.start) {
-                    if(supportFragmentManager.findFragmentById(R.id.mainMapFragmentView) != null)
-                        supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.mainMapFragmentView)!!).commit()
+                    if(supportFragmentManager.findFragmentById(R.id.mainMapFragmentView) != null) {
+                        supportFragmentManager.beginTransaction()
+                            .remove(supportFragmentManager.findFragmentById(R.id.mainMapFragmentView)!!)
+                            .commit()
+                        anyFragmentViewOnStack = false
+                    }
                 }
             }
 

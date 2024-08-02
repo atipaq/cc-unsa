@@ -64,6 +64,9 @@ dependencies {
     implementation (libs.kotlinx.coroutines.core)
     implementation (libs.kotlinx.coroutines.android)
 
+    //Blur imagen
+    implementation(libs.hoko.blur)
+
 
 
 }

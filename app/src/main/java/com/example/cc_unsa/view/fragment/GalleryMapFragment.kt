@@ -21,12 +21,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-private const val ARG_PARAM1 = "param1"
 
 class GalleryMapFragment : Fragment() {
     private var galleryId: Int? = null
     private lateinit var galleryInfo: ExhibitionInfoInMapDto
-    private lateinit var works: List<WorkDto>
+    private lateinit var works: List<WorkInGalleryDto>
     private val months = arrayOf("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
 
     override fun onCreate(savedInstanceState: Bundle?) {
