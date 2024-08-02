@@ -24,5 +24,9 @@ data class WorkEntity(
     @ColumnInfo(name = "year")
     val year: Int,
     @ColumnInfo(name = "image")
-    val image: String
+    val image: String,
+    @ColumnInfo(name = "positionX")
+    val positionX: Float,
+    @ColumnInfo(name = "positionY")
+    val positionY: Float
 )

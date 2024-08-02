@@ -9,5 +9,7 @@ data class WorkDto(
     val description: String,
     val dimension: String,
     val year: Int,
-    val image: String
+    val image: String,
+    val positionX: Float,
+    val positionY: Float
 )

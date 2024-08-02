@@ -159,6 +159,8 @@ class DatabaseInitViewModel(application: Application): AndroidViewModel(applicat
                         val dimension = columns[5]
                         val year = columns[6]
                         val image = columns[7]
+                        val positionX = columns[8]
+                        val positionY = columns[9]
 
                         val work = WorkEntity(
                             id = null,
@@ -169,7 +171,9 @@ class DatabaseInitViewModel(application: Application): AndroidViewModel(applicat
                             description = description,
                             dimension = dimension,
                             year = year.toInt(),
-                            image = image
+                            image = image,
+                            positionX = positionX.toFloat(),
+                            positionY = positionY.toFloat()
                         )
                         this.insertWork(work)
                         line = reader.readLine()
