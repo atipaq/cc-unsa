@@ -1,0 +1,182 @@
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_work_detail_scene"
+    tools:context=".view.fragment.WorkDetailFragment">
+
+    <ImageView
+        android:id="@+id/workImageBlured"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pintura01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/workImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pintura01"
+        app:layout_constraintBottom_toTopOf="@+id/botPannelTitleWorkDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/botPannelTitleWorkDetail"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/category_main_background"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitleWorkDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/abel"
+            android:text="Titulo"
+            android:textColor="@color/cherry_unsa"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Artista"
+            android:textColor="#BABEC1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtArtistWorkDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Ken Taylor"
+            android:textColor="#272727"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Técnica"
+            android:textColor="#BABEC1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtTechniqueWorkDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Tecnica 1"
+            android:textColor="#272727"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Año"
+            android:textColor="#BABEC1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtYearWorkDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="2024"
+            android:textColor="#272727"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Dimensión"
+            android:textColor="#BABEC1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtDimensionWorkDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="100 x 200 cm"
+            android:textColor="#272727"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Descripción"
+            android:textColor="#BABEC1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtDescriptionWorkDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:fontFamily="@font/abel"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio. Donec et nunc eget sapien ultrices viverra"
+            android:textColor="#272727"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnBackFromWorkDetail"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_left_arrow" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Galería"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnBackFromWorkDetail"
+        app:layout_constraintStart_toEndOf="@+id/btnBackFromWorkDetail"
+        app:layout_constraintTop_toTopOf="@+id/btnBackFromWorkDetail" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

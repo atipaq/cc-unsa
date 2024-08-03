@@ -11,14 +11,12 @@ data class ArtistEntity (
     val id: Int?,
     @ColumnInfo(name = "name")
     val name: String,
-    @ColumnInfo(name = "lastname")
-    val lastname: String,
-    @ColumnInfo(name = "birthdate")
-    val birthdate: String,
     @ColumnInfo(name = "specialty")
     val specialty: String,
     @ColumnInfo(name = "photo")
     val photo: String,
     @ColumnInfo(name = "biography")
-    val biography: String
+    val biography: String,
+    @ColumnInfo(name = "awards")
+    val awards: String
 )

@@ -1,32 +1,64 @@
 [versions]
 agp = "8.5.0"
+blurkit = "1.0.0"
+blurkitAndroid = "1.1.1"
+blurkitVersion = "1.1.0"
+blurry = "4.0.0'"
+blurview = "1.6.6"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
+kotlinxCoroutinesCore = "1.7.3"
 material = "1.10.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
 lombok = "1.18.32"
 androidxRoomGradlePlugin = "2.6.1"
 roomCommon = "2.6.1"
+lifecycleViewmodel = "2.8.4"
+lifecycleViewmodelKtx = "2.8.4"
+lifecycleLivedataKtx = "2.8.4"
+activityKtx = "1.10.0-alpha01"
+fragmentKtx = "1.8.2"
+hiltAndroid = "2.51.1"
+hiltAndroidCompiler = "2.51.1"
+hiltAndroidGradlePlugin = "2.51.1"
+hokoBlur = "1.5.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidxRoomGradlePlugin" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "androidxRoomGradlePlugin" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidxRoomGradlePlugin" }
+blurkit = { module = "io.alterac.blurkit:blurkit", version.ref = "blurkit" }
+blurkit-android = { module = "com.github.wonderkiln:blurkit-android", version.ref = "blurkitAndroid" }
+blurkit-v110 = { module = "io.alterac.blurkit:blurkit", version.ref = "blurkitVersion" }
+blurry = { module = "jp.wasabeef:blurry", version.ref = "blurry" }
+blurview = { module = "com.eigthbitlab:blurview", version.ref = "blurview" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
 androidx-androidx-room-gradle-plugin = { group = "androidx.room", name = "androidx.room.gradle.plugin", version.ref = "androidxRoomGradlePlugin" }
 androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-android-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
+hoko-blur = { group = "io.github.hokofly", name = "hoko-blur", version.ref = "hokoBlur" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
